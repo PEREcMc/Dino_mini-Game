@@ -1,0 +1,189 @@
+.none {
+    display: none;
+}
+.game {
+    padding-top: 30px;
+    width: 600px;
+    height: 350px;
+
+    border-bottom: 3px solid #000;
+    margin: 0 auto;
+    /* background-color: #f8f8f8; */
+    background-image: url('./img/bg.png'), url('./img/nebo1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+}
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+#sunny {
+    width: 85px;
+    height: 70px;
+    background-image: url('./img/sunny2.png');
+    background-size: 85px 70px;
+    position: relative;
+    top: -70px;
+    left: 40%;
+}
+#lune {
+    width: 70px;
+    height: 70px;
+    background-image: url('./img/lune.png');
+    background-size: 70px 70px;
+    position: relative;
+    top: -50px;
+    left: 41%;
+}
+.sunnyMov {
+    animation: sunnyMov 12s linear;
+}
+#dino {
+    width: 80px;
+    height: 80px;
+    background-image: url('./img/dino_mult.png');
+    background-size: 80px 80px;
+    position: relative;
+    top: 270px;
+
+    /* animation: dinoMov 0.5s infinite linear; */
+}
+.cloud-wrapper {
+    display: flex;
+    column-gap: 50px;
+}
+#cactus {
+    width: 50px;
+    height: 50px;
+    background-image: url('./img/cactus.png');
+    background-size: 50px 50px;
+    position: relative;
+    top: 222px;
+    left: 550px;
+}
+#cloud {
+    width: 100px;
+    height: 80px;
+    background-image: url('./img/cloud1.png');
+    background-size: 100px 80px;
+
+    position: relative;
+    top: -110px;
+    left: 350px;
+
+    animation: cloudMov 2.5s infinite linear;
+}
+.ptero {
+    width: 80px;
+    height: 60px;
+    background-image: url('./img/ptero.png');
+    background-size: 80px 60px;
+
+    position: relative;
+    top: -130px;
+    left: 520px;
+
+    animation: pteroMov 3.5s infinite linear;
+}
+.ptero1 {
+    width: 80px;
+    height: 60px;
+    background-image: url('./img/ptero1.png');
+    background-size: 80px 60px;
+
+    position: relative;
+    top: -130px;
+    left: 520px;
+
+    animation: pteroMov 3.5s infinite linear;
+}
+.cactusMov {
+    animation: cactusMov 1.5s infinite linear;
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 550px;
+    }
+    100% {
+        left: -30px;
+    }
+}
+.jump {
+    animation: jump 0.5s linear;
+}
+@keyframes jump {
+    0% {
+        top: 270px;
+    }
+    30% {
+        top: 180px;
+    }
+    50% {
+        top: 100px;
+    }
+    80% {
+        top: 180px;
+    }
+    100% {
+        top: 270px;
+    }
+}
+
+@keyframes cloudMov{
+    0% {
+        left: 350px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+ 
+@keyframes pteroMov{
+    0% {
+        top: -130px;
+        left: 520px;
+    }
+    30% {
+        top: -80px;
+        left: 420px;
+    }
+    70% {
+        top: -120px;
+        left: 320px;
+    }
+    /* 80% {
+        top: -50px;
+        left: 220px;
+    } */
+    100% {
+        /* top: -10px;
+        left: 10px; */
+        top: -130px;
+        left: 0px;
+    }
+}
+
+@keyframes sunnyMov{
+    0% {
+        top: -70px;
+        left: 40%;
+    }
+    100% {
+        top: 50px;
+        left: 40%;
+    }
+}
+
+@keyframes dinoMov{
+    0% {
+        top: 280px;
+    }
+    50% {
+        top: 270px;
+    }
+    100% {
+        top: 280px;
+    }
+}
