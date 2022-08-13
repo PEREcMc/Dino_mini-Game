@@ -1,7 +1,31 @@
+a {
+    text-decoration: none;
+    margin: 0; padding: 0;
+    outline-style: none;
+    color: #000;
+}
+#reload {
+    position: absolute;
+    top: 76%;
+    left: 40%;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(243, 191, 20);
+    box-shadow: 3px 5px 10px #000;
+    
+    transition: 0.2s background-color ease-in;
+}
+#reload:hover {
+    background-color: rgb(50, 194, 6);
+}
 .none {
     display: none;
 }
 .game {
+    position: relative;
     padding-top: 30px;
     width: 600px;
     height: 350px;
@@ -72,7 +96,7 @@ p {
     top: -110px;
     left: 350px;
 
-    animation: cloudMov 2.5s infinite linear;
+    animation: cloudMov 5s infinite linear;
 }
 .ptero {
     width: 80px;
@@ -84,7 +108,7 @@ p {
     top: -130px;
     left: 520px;
 
-    animation: pteroMov 3.5s infinite linear;
+    animation: pteroMov 5s infinite linear;
 }
 .ptero1 {
     width: 80px;
@@ -96,7 +120,7 @@ p {
     top: -130px;
     left: 520px;
 
-    animation: pteroMov 3.5s infinite linear;
+    animation: pteroMov 5s infinite linear;
 }
 .cactusMov {
     animation: cactusMov 1.5s infinite linear;
@@ -142,21 +166,21 @@ p {
  
 @keyframes pteroMov{
     0% {
-        top: -130px;
+        top: -170px;
         left: 520px;
     }
-    30% {
-        top: -80px;
+    25% {
+        top: -100px;
         left: 420px;
     }
-    70% {
-        top: -120px;
+    50% {
+        top: -130px;
         left: 320px;
     }
-    /* 80% {
-        top: -50px;
+    70% {
+        top: -80px;
         left: 220px;
-    } */
+    }
     100% {
         /* top: -10px;
         left: 10px; */

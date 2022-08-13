@@ -4,6 +4,8 @@ const ptero = document.getElementById('ptero');
 const sunny = document.getElementById('sunny');
 const game = document.querySelector('.game');
 const lune = document.getElementById('lune');
+const body = document.getElementById('body');
+const reload = document.getElementById('reload');
 
 document.addEventListener('keydown', function (event) {
     jump();
@@ -27,7 +29,7 @@ function sunnyMov() {
 
      setTimeout(function () {
         sunny.classList.add('none');
-        game.style.backgroundImage = "url('./img/bg.png'), url('./../img/night.png')";
+        game.style.backgroundImage = "url('./img/bg.png'), url('./img/night.png')";
         lune.classList.remove('none');
     }, 12000) 
 }
@@ -46,10 +48,18 @@ let isAlive = setInterval(function () {
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'))
 
     if (cactusLeft < 80 && cactusLeft > 0 && dinoTop >= 270) {
-        alert('GAME OVER!')
+        // alert('GAME OVER!')
+        game.style.backgroundImage = "url('./img/gameOver.png')";
+        game.style.backgroundPosition = 'center';
+        game.style.backgroundSize = '400px 400px';
+        sunny.classList.add('none');
+        lune.classList.add('none');
+        ptero.classList.add('none');
+        dino.classList.add('none');
+        cactus.classList.add('none');
+        reload.classList.remove('none');
         cactus.classList.remove('cactusMov')
     }
-
 }, 10);
 
 setInterval(function pteroChange() {
@@ -61,4 +71,10 @@ setInterval(function pteroChange() {
         ptero.classList.add('ptero')
     }
 }, 150);
+ 
 
+isAlive == true ? getReload() : false;
+
+function getReload() {
+        reload.addEventListener('click', () => location.reload())
+}
