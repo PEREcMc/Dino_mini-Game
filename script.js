@@ -7,9 +7,13 @@ const lune = document.getElementById('lune');
 const body = document.getElementById('body');
 const reload = document.getElementById('reload');
 
-document.addEventListener('keydown', function (event) {
+
+document.addEventListener('touchstart' && 'keydown', function (e) {
     jump();
 })
+// document.addEventListener('keydown', function (event) {
+//     jump();
+// })
 document.addEventListener('click', function (params) {
     cactusMov();
     sunnyMov();
@@ -47,18 +51,22 @@ let isAlive = setInterval(function () {
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'))
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'))
 
-    if (cactusLeft < 80 && cactusLeft > 0 && dinoTop >= 270) {
+    if (cactusLeft < 70 && cactusLeft > 0 && dinoTop >= 270) {
         // alert('GAME OVER!')
-        game.style.backgroundImage = "url('./img/gameOver.png')";
-        game.style.backgroundPosition = 'center';
-        game.style.backgroundSize = '400px 400px';
-        sunny.classList.add('none');
-        lune.classList.add('none');
-        ptero.classList.add('none');
-        dino.classList.add('none');
-        cactus.classList.add('none');
-        reload.classList.remove('none');
-        cactus.classList.remove('cactusMov')
+        cactus.classList.remove('cactusMov');
+        cactus.classList.add('cactusEnd');
+
+        setTimeout(() => {
+            game.style.backgroundImage = "url('./img/gameOver.png')";
+            game.style.backgroundPosition = 'center';
+            game.style.backgroundSize = '400px 400px';
+            sunny.classList.add('none');
+            lune.classList.add('none');
+            ptero.classList.add('none');
+            dino.classList.add('none');
+            cactus.classList.add('none');
+            reload.classList.remove('none');
+        }, 500);
     }
 }, 10);
 
