@@ -8,12 +8,12 @@ const body = document.getElementById('body');
 const reload = document.getElementById('reload');
 
 
-document.addEventListener('touchstart' && 'keydown', function (e) {
+dino.addEventListener('touchstart', function (event) {
     jump();
 })
-// document.addEventListener('keydown', function (event) {
-//     jump();
-// })
+document.addEventListener('keydown', function (event) {
+    jump();
+})
 document.addEventListener('click', function (params) {
     cactusMov();
     sunnyMov();
