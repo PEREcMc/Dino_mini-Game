@@ -1,11 +1,11 @@
 body {
-    margin: 0;
-
+    margin: 0 auto;
+    position: relative;
     background-image: url('./img/smartfon.png');
     background-repeat: no-repeat;
     background-size: 720px 350px;
-    background-position-x: 294px;
-    background-position-y: 40px;
+    background-position-x: 50%;
+    background-position-y: 130%;
 }
 a {
     text-decoration: none;
@@ -51,18 +51,18 @@ a {
     display: none;
 }
 .game {
+    margin: 0 auto;
     position: relative;
     padding-top: 30px;
     width: 600px;
     height: 350px;
 
     /* border-bottom: 3px solid #000; */
-    margin: 0 auto;
     /* background-color: #f8f8f8; */
     background-image: url('./img/bg.png'), url('./img/nebo1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 50px;
+    background-position-y: 49px;
 }
 p {
     text-align: center;
@@ -251,20 +251,84 @@ p {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 2300px) {
     body {
-        background-position-x: 39px;
+        background-position-x: 51%;
     }
     #play {
-        top: 30%;
-        left: 41%;
+        top: 60%;
+        left: 46%;
     }
 }
-@media (max-width: 736px) {
+@media (max-width: 1700px) {
     body {
-        background-position-x: 23px;
+        background-position-x: 51.5%;
     }
     #play {
         top: 63%;
+        left: 45%;
+}
+}
+@media (max-width: 1400px) {
+    body {
+        background-position-x: 52%;
+    }
+    #play {
+        top: 63%;
+        left: 45%;
+}
+}
+@media (max-width: 1200px) {
+    body {
+        background-position-x: 52.5%;
+    }
+    #play {
+        top: 63%;
+        left: 43%;
+}
+}
+@media (max-width: 1150px) {
+    body {
+        background-position-x: 53.5%;
+    }
+    #play {
+        top: 63%;
+        left: 43%;
+}
+}
+@media (max-width: 1015px) {
+    body {
+        background-position-x: 54%;
+    }
+    #play {
+        top: 63%;
+        left: 41%;
+}
+}
+@media (max-width: 920px) {
+    body {
+        background-position-x: 55%;
+    }
+    #play {
+        top: 63%;
+        left: 41%;
+}
+}
+@media (max-width: 770px) {
+    body {
+        background-position-x: 80%;
+    }
+    #play {
+        top: 63%;
+        left: 41%;
+}
+}
+@media (max-width: 740px) {
+    body {
+        background-position-x: 120%;
+    }
+    #play {
+        top: 63%;
+        left: 41%;
 }
 }
