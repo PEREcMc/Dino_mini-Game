@@ -6,7 +6,9 @@ const game = document.querySelector('.game');
 const lune = document.getElementById('lune');
 const body = document.getElementById('body');
 const reload = document.getElementById('reload');
+const play = document.getElementById('play');
 
+playGame();
 
 dino.addEventListener('touchstart', function (event) {
     jump();
@@ -14,16 +16,29 @@ dino.addEventListener('touchstart', function (event) {
 document.addEventListener('keydown', function (event) {
     jump();
 })
-document.addEventListener('click', function (params) {
-    cactusMov();
-    sunnyMov();
-})
+
+function playGame() {
+    play.addEventListener('click', function () {
+        cactusMov();
+        sunnyMov();
+        play.classList.add('none');
+        ptero.classList.remove('none');
+
+        setInterval(function pteroChange() {
+            if (ptero.classList == ('ptero')) {
+                ptero.classList.remove('ptero')
+                ptero.classList.add('ptero1')
+            } else {
+                ptero.classList.remove('ptero1')
+                ptero.classList.add('ptero')
+            }
+        }, 150);
+    });
+}
 
 function cactusMov() {
     if (cactus.classList != ('cactusMov')) {
         cactus.classList.add('cactusMov')
-    } else {
-        cactus.classList.remove('cactusMov')
     }
 }
 function sunnyMov() {
@@ -51,15 +66,15 @@ let isAlive = setInterval(function () {
     let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'))
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue('left'))
 
-    if (cactusLeft < 70 && cactusLeft > 0 && dinoTop >= 270) {
+    if (cactusLeft < 70 && cactusLeft > 0 && dinoTop >= 268) {
         // alert('GAME OVER!')
         cactus.classList.remove('cactusMov');
         cactus.classList.add('cactusEnd');
 
         setTimeout(() => {
             game.style.backgroundImage = "url('./img/gameOver.png')";
-            game.style.backgroundPosition = 'center';
-            game.style.backgroundSize = '400px 400px';
+            game.style.backgroundPosition = '145px 60px';
+            game.style.backgroundSize = '315px 315px';
             sunny.classList.add('none');
             lune.classList.add('none');
             ptero.classList.add('none');
@@ -69,17 +84,6 @@ let isAlive = setInterval(function () {
         }, 500);
     }
 }, 10);
-
-setInterval(function pteroChange() {
-    if (ptero.classList == ('ptero')) {
-        ptero.classList.remove('ptero')
-        ptero.classList.add('ptero1')
-    } else {
-        ptero.classList.remove('ptero1')
-        ptero.classList.add('ptero')
-    }
-}, 150);
- 
 
 isAlive == true ? getReload() : false;
 

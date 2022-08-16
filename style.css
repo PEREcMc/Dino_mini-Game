@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+
+    background-image: url('./../img/smartfon.png');
+    background-repeat: no-repeat;
+    background-size: 720px 350px;
+    background-position-x: 294px;
+    background-position-y: 40px;
+}
+
 a {
     text-decoration: none;
     margin: 0; padding: 0;
@@ -6,8 +16,22 @@ a {
 }
 #reload {
     position: absolute;
-    top: 76%;
-    left: 40%;
+    top: 78.5%;
+    left: 40.5%;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(243, 191, 20);
+    box-shadow: 1px 3px 3px #000;
+
+    transition: 0.2s background-color ease-in;
+}
+#play {
+    position: absolute;
+    top: 40%;
+    left: 44%;
     font-size: 21px;
     text-transform: uppercase;
     font-weight: 500;
@@ -17,6 +41,9 @@ a {
     box-shadow: 3px 5px 10px #000;
     
     transition: 0.2s background-color ease-in;
+}
+#play:hover {
+    background-color: rgb(50, 194, 6);
 }
 #reload:hover {
     background-color: rgb(50, 194, 6);
@@ -30,7 +57,7 @@ a {
     width: 600px;
     height: 350px;
 
-    border-bottom: 3px solid #000;
+    /* border-bottom: 3px solid #000; */
     margin: 0 auto;
     /* background-color: #f8f8f8; */
     background-image: url('./img/bg.png'), url('./img/nebo1.png');
@@ -69,7 +96,8 @@ p {
     background-image: url('./img/dino_mult.png');
     background-size: 80px 80px;
     position: relative;
-    top: 270px;
+    top: 268px;
+    left: 5px;
 
     /* animation: dinoMov 0.5s infinite linear; */
 }
@@ -84,7 +112,7 @@ p {
     background-size: 50px 50px;
     background-repeat: no-repeat;
     position: relative;
-    top: 222px;
+    top: 220px;
     left: 550px;
 }
 #cloud {
