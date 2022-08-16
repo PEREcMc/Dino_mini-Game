@@ -1,13 +1,12 @@
 body {
     margin: 0;
 
-    background-image: url('./../img/smartfon.png');
+    background-image: url('./img/smartfon.png');
     background-repeat: no-repeat;
     background-size: 720px 350px;
     background-position-x: 294px;
     background-position-y: 40px;
 }
-
 a {
     text-decoration: none;
     margin: 0; padding: 0;
@@ -250,4 +249,22 @@ p {
     100% {
         left: 70px;
     }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-position-x: 39px;
+    }
+    #play {
+        top: 30%;
+        left: 41%;
+    }
+}
+@media (max-width: 736px) {
+    body {
+        background-position-x: 23px;
+    }
+    #play {
+        top: 63%;
+}
 }
